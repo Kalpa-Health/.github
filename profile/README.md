@@ -1,22 +1,50 @@
 # Kalpa Health
 
-**Healthcare infrastructure for Southeast Asia — built in Go, designed for the clinic floor.**
+**Clinic OS for Southeast Asia — built by clinicians, powered by Go, AI-native from day one.**
 
-We build [WellMed](https://kalpahealth.com), a microservices platform for multi-location clinic networks. Our focus is the operational layer that most healthcare SaaS ignores: payer rules, crew care, managed care contracts, and the compliance surface area that comes with SATU SEHAT and Indonesian Ministry of Health reporting.
+15 years of running clinics and four systems later, we decided to build our own. [WellMed](https://kalpahealth.com) is what happens when people who actually work the clinic floor design the software. It handles multi-location operations, payer logic, managed care, and full SATU SEHAT compliance — not as bolt-on integrations, but as core architecture built on the FHIR global health standard.
+
+The platform is live and in production across clinic networks in Bali and Surabaya.
 
 ---
 
-## What we're building
+## What WellMed does
 
-**WellMed** is a clinic management backbone designed for groups running 2–20 locations. It handles:
+WellMed is a Clinic OS for groups running 2–20 locations. It handles:
 
 - Multi-clinic patient records with strict data isolation
-- Service catalog + payer-aware item pricing
+- Service catalog with payer-aware pricing (BPJS, private, managed care)
 - Consultation workflows with async inter-service communication
-- BPJS and SATU SEHAT compliance hooks (KFA, SNOMED, ICD-10)
-- Managed care / crew care plan administration
+- Native SATU SEHAT synchronization (KFA, SNOMED CT, ICD-10, FHIR R4)
+- Managed care and crew care plan administration
+- AI-assisted clinical workflows — not a feature, part of the foundation
 
-The platform is live and in production across Padma Medical Group's clinic network in Bali and Surabaya.
+---
+
+## Our values
+
+**Focus, focus, focus.** Say no to almost everything so you can say yes to the right thing.
+
+**We take ownership for our product.** No finger-pointing, no "that's not my service." If it ships, it's ours.
+
+**We are the caretakers of our user's experience.** Every screen, every interaction, every edge case — someone on the clinic floor has to live with it.
+
+**Celebrate everyone's successes.** Wins are shared. Credit flows to the people who did the work.
+
+**Push each other to exceed our own perceived maximum potential.** Comfortable is the enemy of great.
+
+**We learn from the exploration of new knowledge and experience.** Curiosity is a job requirement.
+
+---
+
+## Engineering culture
+
+We're a small team with a scrappy attitude: do the most with the fewest. "Most" means beautiful, intuitive design. Clever, elegant architecture. Performant, resilient systems. User-focused, UX-lite feature development.
+
+- **FHIR-native.** WellMed speaks the global health interoperability standard at its core — SATU SEHAT compliance is a natural output, not a compliance checkbox.
+- **AI-native.** Intelligence is woven into the platform, not bolted on after the fact.
+- **Async by default.** Services communicate via RabbitMQ. Synchronous gRPC is explicit and justified.
+- **Document decisions, not just code.** ADRs for anything architectural. If it's worth arguing about, it's worth writing down.
 
 ---
 
@@ -48,21 +76,8 @@ Architecture decisions are documented in ADRs in [`kalpa-docs`](https://github.c
 
 ---
 
-## Engineering culture
+## Based in Bandung, Indonesia
 
-- **Document decisions, not just code.** We use ADRs for anything architectural. If it's worth arguing about, it's worth writing down.
-- **Async by default.** Services communicate via RabbitMQ. Synchronous gRPC is explicit and justified.
-- **Conservative automation.** Human review gates on `main`. Automated pipelines on `develop` and `staging`.
-- **Compliance as a first-class concern.** SATU SEHAT, BPJS, and DJP requirements are requirements, not afterthoughts.
-
----
-
-## We're based in Bali, Indonesia
-
-Kalpa is a small team building serious infrastructure for a market that global vendors underserve. We work in the GMT+8 timezone across a distributed setup.
+Kalpa is a small team building serious infrastructure for a market that global vendors underserve. We work in the GMT+7 timezone.
 
 If you're a Go developer who cares about healthcare systems in Southeast Asia, reach us at **[hello@kalpahealth.com](mailto:hello@kalpahealth.com)**.
-
----
-
-![GitHub Org Stats](https://github-readme-stats.vercel.app/api?username=kalpa-health&show_icons=true&theme=default&hide_border=true&include_all_commits=true)
